@@ -13,7 +13,7 @@
     <title>Modern Banker</title>
   </head>
   <body>
-    <nav class="navbar bg-light row mt-2">
+    <nav class="navbar bg-light row mt-2 container">
       <p class="login-text col-sm-2 ms-3 my-auto">Log in to get started</p>
       <a class="navbar-brand col-sm-3" href="#">
         <img
@@ -39,6 +39,15 @@
         <button class="btn btn-outline-success my-1 me-2">LOGIN</button>
       </form>
     </nav>
+    <main class="app">
+      <div class="balance container p-3 mt-2 mb-4 bg-dark text-white rounded-4">
+        <div class="col-4 ms-3">
+          <p class="display-6 fw-bold">Current balance</p>
+          <p>As of <span class="date">00/00/2099</span></p>
+        </div>
+        <p class="display-6 col-2 ms-5">0000€</p>
+      </div>
+    </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
