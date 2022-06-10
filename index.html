@@ -3,19 +3,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
     <title>Modern Banker</title>
   </head>
   <body>
-    <h1>Hello from the most awesome banking app!</h1>
-    <nav>
-      <p class="welcome">Log in to get started</p>
-      <img src="logo.png" alt="Logo" class="logo" />
-      <form>
-        <input type="text" placeholder="user" />
-        <input type="password" placeholder="PIN" maxlength="4" />
-        <button>LOGIN</button>
+    <nav class="navbar bg-light row">
+      <p class="col-sm-2 my-auto">Log in to get started</p>
+      <a class="navbar-brand col-sm-3" href="#">
+        <img
+          src="logo.png"
+          alt="Logo"
+          class="logo"
+          width="30"
+          height="24"
+        />Modern Banker</a
+      >
+      <form class="col-sm-6 d-inline-flex my-auto">
+        <input
+          class="form-control my-1 me-2"
+          type="text"
+          placeholder="User ID"
+        />
+        <input
+          class="form-control my-1 me-2"
+          type="password"
+          placeholder="PIN"
+          maxlength="4"
+        />
+        <button class="btn btn-outline-success my-1 me-2">LOGIN</button>
       </form>
     </nav>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
