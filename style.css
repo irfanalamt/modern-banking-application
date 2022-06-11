@@ -15,6 +15,14 @@ nav {
   justify-content: space-between;
   text-align: center;
   max-height: 100px;
+  background-image: linear-gradient(
+    to right,
+    #203560,
+    #2d2544,
+    #28192a,
+    #1b0f16,
+    #000000
+  );
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
@@ -50,8 +58,14 @@ nav {
   padding-right: 20;
   padding-left: 20;
   border-radius: 1rem;
-  background-color: #52acff;
-  background-image: linear-gradient(135deg, #52acff 0%, #ffcb03 40%);
+  background-image: linear-gradient(
+    to right bottom,
+    #b9ff00,
+    #cdfb00,
+    #dff600,
+    #f0f100,
+    #ffec00
+  );
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
@@ -61,8 +75,14 @@ nav {
   padding-right: 20;
   padding-left: 20;
   border-radius: 1rem;
-  background-color: #52acff;
-  background-image: linear-gradient(135deg, #52acff 0%, #9be15d 40%);
+  background-image: linear-gradient(
+    to right bottom,
+    #00ffb1,
+    #45ff94,
+    #6cff74,
+    #8fff4d,
+    #b2ff00
+  );
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
@@ -72,8 +92,14 @@ nav {
   padding-right: 20;
   padding-left: 20;
   border-radius: 1rem;
-  background-color: #52acff;
-  background-image: linear-gradient(135deg, #52acff 0%, #ff585f 40%);
+  background-image: linear-gradient(
+    to right bottom,
+    #ff7600,
+    #ff6600,
+    #ff5500,
+    #ff3f00,
+    #ff1d00
+  );
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
