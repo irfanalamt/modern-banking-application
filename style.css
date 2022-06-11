@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Poppins&display=swap');
 
 body {
   background-color: #f3f3f3;
@@ -8,13 +8,31 @@ nav {
 }
 
 .balance {
+  font-family: 'Exo 2', sans-serif;
+  font-size: small;
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: center;
 }
 
-.app {
-  font-family: 'Exo 2', sans-serif;
-  font-size: small;
+.movements {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: large;
+  display: inline;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: scroll;
+}
+
+.movement_row {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+
+.movement_item {
+  width: 33%;
 }
