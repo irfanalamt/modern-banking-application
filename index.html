@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Modern Banker</title>
   </head>
-  <body class="position-relative">
+  <body class="position-relative container py-4">
     <nav class="navbar bg-light row mt-2">
       <p class="login-text col-sm-2 ms-3 my-auto">Log in to get started</p>
       <a class="navbar-brand col-sm-3" href="#">
@@ -26,30 +26,29 @@
       >
       <form class="col-sm-6 d-inline-flex my-auto">
         <input
-          class="form-control my-1 me-2"
+          class="form-control my-1 me-2 form_input_id"
           type="text"
           placeholder="User ID"
         />
         <input
-          class="form-control my-1 me-2"
+          class="form-control my-1 me-2 form_input_password"
           type="password"
           placeholder="PIN"
           maxlength="4"
         />
-        <button class="btn btn-outline-success my-1 me-2">LOGIN</button>
+        <button class="btn btn-outline-success my-1 me-2 form_login_button">
+          LOGIN
+        </button>
       </form>
     </nav>
     <main class="app">
-      <div
-        class="balance container p-3 my-2 mx-5 bg-dark text-white rounded-4 align-items-center"
-      >
-        <div class="col-4">
-          <p class="display-6 fw-bold current_balance mt-2">Current balance</p>
-        </div>
-        <p class="display-6 col-2 ms-5 mt-2 balance_amount">0000$</p>
+      <div class="balance p-3 my-2 mx-2 bg-dark text-white rounded-4">
+        <p class="display-6 fw-bold current_balance mt-2">Current balance</p>
+
+        <p class="display-6 ms-5 mt-2 balance_amount">0000$</p>
       </div>
-      <div class="account_details container row justify-content-between">
-        <div class="movements mx-2 p-1 col-12 col-md-7">
+      <div class="account_details row justify-content-center">
+        <div class="movements mx-2 py-3 col-12 col-md-7">
           <div class="row movement_row mb-2 p-1">
             <div class="movement_item">2 deposit</div>
             <div class="movement_item">3 days ago</div>
@@ -61,8 +60,8 @@
             <div class="movement_item">-378€</div>
           </div>
         </div>
-        <div class="operations mt-2 col-12 col-md-4">
-          <div class="transfer row">
+        <div class="operations mx-2 mt-2 col-12 col-md-4">
+          <div class="transfer row mb-2 mx-2 py-3">
             <h2 class="text-center">Transfer money</h2>
             <form>
               <div class="d-flex">
@@ -83,7 +82,7 @@
               </div>
             </form>
           </div>
-          <div class="loan row mt-1">
+          <div class="loan row my-2 mx-2 py-3">
             <h2 class="text-center">Request loan</h2>
             <form class="form">
               <div class="d-flex">
@@ -98,7 +97,7 @@
               </div>
             </form>
           </div>
-          <div class="close row mt-1">
+          <div class="close row my-2 mx-2 py-3">
             <h2 class="text-center">Close account</h2>
             <form>
               <div class="d-flex">
