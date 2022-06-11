@@ -40,7 +40,7 @@
       </form>
     </nav>
     <main class="app">
-      <div class="balance container p-3 mt-2 mb-4 bg-dark text-white rounded-4">
+      <div class="balance container p-3 mt-2 mb-2 bg-dark text-white rounded-4">
         <div class="col-4 ms-3">
           <p class="display-6 fw-bold">Current balance</p>
           <p>As of <span class="date">00/00/2099</span></p>
@@ -62,31 +62,54 @@
         </div>
         <div class="operations col-4">
           <div class="transfer row">
-            <h2>Transfer money</h2>
+            <h2 class="text-center">Transfer money</h2>
             <form>
-              <input type="text" />
-              <input type="number" />
-              <button>&rarr;</button>
-              <label>Transfer to</label>
-              <label>Amount</label>
+              <div class="d-flex">
+                <input
+                  class="form-control form-control-sm mx-1"
+                  type="text"
+                  placeholder="Transfer to"
+                />
+                <input
+                  class="form-control form-control-sm"
+                  type="number"
+                  placeholder="Amount"
+                />
+
+                <button class="btn btn-light mx-2">&rarr;</button>
+              </div>
             </form>
           </div>
-          <div class="loan row">
-            <h2>Request loan</h2>
+          <div class="loan row mt-1">
+            <h2 class="text-center">Request loan</h2>
             <form class="form">
-              <input type="number" />
-              <button>&rarr;</button>
-              <label>Amount</label>
+              <div class="d-flex">
+                <input
+                  class="form-control form-control-sm mx-1"
+                  type="number"
+                  placeholder="Amount"
+                />
+                <button class="btn btn-light mx-2">&rarr;</button>
+              </div>
             </form>
           </div>
-          <div class="close row">
-            <h2>Close account</h2>
+          <div class="close row mt-1">
+            <h2 class="text-center">Close account</h2>
             <form>
-              <input type="text" />
-              <input type="password" maxlength="6" />
-              <button>&rarr;</button>
-              <label>Confirm user</label>
-              <label>Confirm PIN</label>
+              <div class="d-flex">
+                <input
+                  class="form-control form-control-sm mx-1"
+                  type="text"
+                  placeholder="Confirm user"
+                />
+                <input
+                  class="form-control form-control-sm"
+                  type="password"
+                  maxlength="6"
+                  placeholder="Confirm PIN"
+                />
+                <button class="btn btn-light mx-2">&rarr;</button>
+              </div>
             </form>
           </div>
         </div>

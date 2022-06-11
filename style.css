@@ -14,25 +14,52 @@ nav {
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  max-height: 100px;
 }
 
 .movements {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: large;
-  display: inline;
-  background-color: #fff;
   border-radius: 1rem;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .movement_row {
   justify-content: space-between;
   align-items: center;
+  text-align: center;
   width: 100%;
   border-bottom: 1px solid #eee;
 }
 
 .movement_item {
   width: 33%;
+}
+
+.transfer {
+  padding-top: 10;
+  padding-bottom: 10;
+  padding-right: 20;
+  padding-left: 20;
+  border-radius: 1rem;
+  background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+.loan {
+  padding-top: 10;
+  padding-bottom: 10;
+  padding-right: 20;
+  padding-left: 20;
+  border-radius: 1rem;
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.close {
+  padding-top: 10;
+  padding-bottom: 10;
+  padding-right: 20;
+  padding-left: 20;
+  border-radius: 1rem;
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
 }
