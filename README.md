@@ -3,6 +3,16 @@
 A modern web banking application engineered with HTML, CSS , JavaScript, Bootstrap.
 https://irfanalamt.github.io/modern-banking-application/
 
+## Usage
+
+(dummy credentials to login)
+
+- username: ia
+- password: 1111
+
+- username: jk
+- password: 2222
+
 ## Features
 
 - Modern, user-friendly UI 🌟✨
