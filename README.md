@@ -7,11 +7,11 @@ https://irfanalamt.github.io/modern-banking-application/
 
 (dummy credentials to login)
 
-- username: ia
-- password: 1111
+1. username: ia
+   password: 1111
 
-- username: jk
-- password: 2222
+2. username: jk
+   password: 2222
 
 ## Features
 
