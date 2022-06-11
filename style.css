@@ -10,7 +10,10 @@ nav {
   font-family: 'Exo 2', sans-serif;
   font-weight: bold;
 }
-
+.app {
+  opacity: 0;
+  transition: all 1s;
+}
 .balance {
   font-family: 'Exo 2', sans-serif;
   font-size: small;

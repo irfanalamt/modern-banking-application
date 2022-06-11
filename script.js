@@ -32,9 +32,12 @@ const account4 = {
 const accounts = [account1, account2, account3, account4];
 
 //Elements
+const labelWelcome = document.querySelector('.login-text');
 const inputLoginUsername = document.querySelector('.form_input_id');
 const inputLoginPin = document.querySelector('.form_input_password');
 const btnLogin = document.querySelector('.form_login_button');
+
+const containerApp = document.querySelector('.app');
 
 const containerMovements = document.querySelector('.movements');
 const labelBalance = document.querySelector('.balance_amount');
@@ -55,7 +58,6 @@ const displayMovements = (movements) => {
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
-displayMovements(account1.movements);
 
 //To generate username using first letter of each letter in name
 const userNameGenerator = (accs) => {
@@ -68,14 +70,12 @@ const userNameGenerator = (accs) => {
   });
 };
 userNameGenerator(accounts);
-console.log(accounts);
 
 // Calculate, update balance from [movements]
 const calcDisplayBalance = (movements) => {
   const balance = movements.reduce((acc, mov) => acc + mov);
   labelBalance.textContent = `${balance}$`;
 };
-calcDisplayBalance(account1.movements);
 
 //Event handlers
 let currentAccount;
@@ -85,4 +85,13 @@ btnLogin.addEventListener('click', function (e) {
     (acc) => acc.username === inputLoginUsername.value
   );
   console.log(currentAccount);
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    labelWelcome.textContent = `Welcome back, ${
+      currentAccount.owner.split(' ')[0]
+    }`;
+    containerApp.style.opacity = 100;
+
+    displayMovements(currentAccount.movements);
+    calcDisplayBalance(currentAccount.movements);
+  }
 });
