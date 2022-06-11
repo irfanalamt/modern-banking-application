@@ -34,6 +34,7 @@ const accounts = [account1, account2, account3, account4];
 //Elements
 const containerMovements = document.querySelector('.movements');
 
+// To display [movements] of single user to screen
 const displayMovements = (movements) => {
   containerMovements.innerHTML = '';
 
@@ -49,5 +50,17 @@ const displayMovements = (movements) => {
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
-
 displayMovements(account1.movements);
+
+//To generate username using first letter of each letter in name
+const userNameGenerator = (accs) => {
+  accs.forEach((acc) => {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map((name) => name[0])
+      .join('');
+  });
+};
+userNameGenerator(accounts);
+console.log(accounts);

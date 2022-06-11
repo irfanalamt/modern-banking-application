@@ -32,6 +32,7 @@ nav {
   font-size: large;
   border-radius: 1rem;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
 .movement_row {
