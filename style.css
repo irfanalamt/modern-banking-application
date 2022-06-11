@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Poppins&family=Roboto+Slab&display=swap');
 
 body {
   background-color: #f3f3f3;
@@ -35,6 +35,12 @@ nav {
 
 .movement_item {
   width: 33%;
+}
+
+.operations {
+  font-family: 'Roboto Slab', serif;
+  font-size: xx-small;
+  font-weight: bold;
 }
 
 .transfer {
