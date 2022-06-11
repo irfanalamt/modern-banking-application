@@ -5,6 +5,7 @@ body {
 }
 nav {
   font-family: 'Exo 2', sans-serif;
+  font-weight: bold;
 }
 
 .balance {
