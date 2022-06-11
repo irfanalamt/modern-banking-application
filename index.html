@@ -40,15 +40,15 @@
       </form>
     </nav>
     <main class="app">
-      <div class="balance container p-3 mt-2 mb-2 bg-dark text-white rounded-4">
+      <div class="balance container p-4 mt-2 mb-2 bg-dark text-white rounded-4">
         <div class="col-4 ms-3">
-          <p class="display-6 fw-bold">Current balance</p>
+          <p class="display-6 fw-bold current_balance">Current balance</p>
           <p>As of <span class="date">00/00/2099</span></p>
         </div>
-        <p class="display-6 col-2 ms-5">0000€</p>
+        <p class="display-6 col-2 ms-5 balance_amount">0000€</p>
       </div>
-      <div class="account_details container d-flex">
-        <div class="movements col-7">
+      <div class="account_details container row">
+        <div class="movements col-12 col-md-7">
           <div class="row movement_row mb-2 p-1">
             <div class="movement_item">2 deposit</div>
             <div class="movement_item">3 days ago</div>
@@ -60,7 +60,7 @@
             <div class="movement_item">-378€</div>
           </div>
         </div>
-        <div class="operations col-4">
+        <div class="operations col-12 col-md-4">
           <div class="transfer row">
             <h2 class="text-center">Transfer money</h2>
             <form>

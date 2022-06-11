@@ -31,6 +31,7 @@ nav {
   text-align: center;
   width: 100%;
   border-bottom: 1px solid #eee;
+  margin-left: 30px;
 }
 
 .movement_item {
@@ -68,4 +69,12 @@ nav {
   padding-left: 20;
   border-radius: 1rem;
   background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+.current_balance {
+  font-size: 25px;
+}
+
+.balance_amount {
+  font-size: 30px;
 }
