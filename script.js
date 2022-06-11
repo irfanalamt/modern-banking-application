@@ -32,6 +32,10 @@ const account4 = {
 const accounts = [account1, account2, account3, account4];
 
 //Elements
+const inputLoginUsername = document.querySelector('.form_input_id');
+const inputLoginPin = document.querySelector('.form_input_password');
+const btnLogin = document.querySelector('.form_login_button');
+
 const containerMovements = document.querySelector('.movements');
 const labelBalance = document.querySelector('.balance_amount');
 
@@ -66,8 +70,19 @@ const userNameGenerator = (accs) => {
 userNameGenerator(accounts);
 console.log(accounts);
 
+// Calculate, update balance from [movements]
 const calcDisplayBalance = (movements) => {
   const balance = movements.reduce((acc, mov) => acc + mov);
   labelBalance.textContent = `${balance}$`;
 };
 calcDisplayBalance(account1.movements);
+
+//Event handlers
+let currentAccount;
+btnLogin.addEventListener('click', function (e) {
+  e.preventDefault();
+  currentAccount = accounts.find(
+    (acc) => acc.username === inputLoginUsername.value
+  );
+  console.log(currentAccount);
+});
