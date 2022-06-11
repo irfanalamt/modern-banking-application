@@ -33,6 +33,7 @@ const accounts = [account1, account2, account3, account4];
 
 //Elements
 const containerMovements = document.querySelector('.movements');
+const labelBalance = document.querySelector('.balance_amount');
 
 // To display [movements] of single user to screen
 const displayMovements = (movements) => {
@@ -45,7 +46,7 @@ const displayMovements = (movements) => {
     const html = `<div class="row movement_row mb-2 p-1">
     <div class="movement_item ${themeClass}">${type}</div>
     <div class="movement_item"></div>
-    <div class="movement_item">${mov}€</div>
+    <div class="movement_item">${mov}$</div>
   </div>`;
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
@@ -64,3 +65,9 @@ const userNameGenerator = (accs) => {
 };
 userNameGenerator(accounts);
 console.log(accounts);
+
+const calcDisplayBalance = (movements) => {
+  const balance = movements.reduce((acc, mov) => acc + mov);
+  labelBalance.textContent = `${balance}$`;
+};
+calcDisplayBalance(account1.movements);
