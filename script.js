@@ -146,5 +146,9 @@ btnTransfer.addEventListener('click', function (e) {
 
     // Update UI
     updateUI(currentAccount);
+  } else {
+    toastBody.innerText = `Transfer unsuccessful!❌`;
+    const toast = new bootstrap.Toast(toastLive);
+    toast.show();
   }
 });
