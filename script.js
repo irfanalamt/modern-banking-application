@@ -37,6 +37,7 @@ const inputLoginUsername = document.querySelector('.form_input_id');
 const inputLoginPin = document.querySelector('.form_input_password');
 const btnLogin = document.querySelector('.form_login_button');
 const navbar = document.querySelector('.navbar');
+const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
 const containerApp = document.querySelector('.app');
 
 const containerMovements = document.querySelector('.movements');
@@ -77,6 +78,12 @@ const calcDisplayBalance = (movements) => {
   labelBalance.textContent = `${balance}$`;
 };
 
+//Create custom alerts and append to html
+const alert = (message, type) => {
+  alertPlaceholder.innerText = `${message}`;
+  alertPlaceholder.className = `alert alert-${type} mx-auto text-center mt-3 w-50`;
+};
+
 //Event handlers
 let currentAccount;
 btnLogin.addEventListener('click', function (e) {
@@ -84,14 +91,16 @@ btnLogin.addEventListener('click', function (e) {
   currentAccount = accounts.find(
     (acc) => acc.username === inputLoginUsername.value
   );
-  console.log(currentAccount);
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
     labelWelcome.textContent = `Welcome back, ${
       currentAccount.owner.split(' ')[0]
     }`;
     containerApp.style.opacity = 100;
+    alertPlaceholder.remove();
 
     displayMovements(currentAccount.movements);
     calcDisplayBalance(currentAccount.movements);
+  } else {
+    alert('Invalid PIN!', 'danger');
   }
 });
