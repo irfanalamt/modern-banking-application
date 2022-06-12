@@ -16,7 +16,7 @@ const account2 = {
 };
 
 const account3 = {
-  owner: 'Steven Thomas Williams',
+  owner: 'Steve Harry',
   movements: [100, -200, 540, -200, -80, 150, 300, -660],
   interestRate: 0.7,
   pin: 3333,
@@ -36,7 +36,7 @@ const labelWelcome = document.querySelector('.login-text');
 const inputLoginUsername = document.querySelector('.form_input_id');
 const inputLoginPin = document.querySelector('.form_input_password');
 const btnLogin = document.querySelector('.form_login_button');
-
+const navbar = document.querySelector('.navbar');
 const containerApp = document.querySelector('.app');
 
 const containerMovements = document.querySelector('.movements');

@@ -4,16 +4,24 @@ html {
   box-sizing: border-box;
 }
 body {
-  background-color: #f3f3f3;
+  background-image: linear-gradient(
+    to bottom,
+    #ffffff,
+    #f9faff,
+    #eff6ff,
+    #e2f3ff,
+    #d3f1ff
+  );
 }
-nav {
-  font-family: 'Exo 2', sans-serif;
-  font-weight: bold;
+.login-text {
+  font-size: medium;
+  font-weight: 500;
 }
 .app {
   opacity: 0;
   transition: all 1s;
 }
+
 .balance {
   font-family: 'Exo 2', sans-serif;
   font-size: small;
@@ -38,6 +46,7 @@ nav {
   font-size: large;
   border-radius: 1rem;
   overflow: hidden;
+  background-color: #fefffa;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
