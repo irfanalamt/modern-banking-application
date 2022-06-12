@@ -40,8 +40,15 @@ const navbar = document.querySelector('.navbar');
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
 const containerApp = document.querySelector('.app');
 
+const inputTransferTo = document.querySelector('.transfer_to');
+const inputTransferAmount = document.querySelector('.transfer_amount');
+const btnTransfer = document.querySelector('.transfer_button');
+
 const containerMovements = document.querySelector('.movements');
 const labelBalance = document.querySelector('.balance_amount');
+
+const toastLive = document.getElementById('liveToast');
+const toastBody = document.querySelector('.toast-body');
 
 // To display [movements] of single user to screen
 const displayMovements = (movements) => {
@@ -73,9 +80,9 @@ const userNameGenerator = (accs) => {
 userNameGenerator(accounts);
 
 // Calculate, update balance from [movements]
-const calcDisplayBalance = (movements) => {
-  const balance = movements.reduce((acc, mov) => acc + mov);
-  labelBalance.textContent = `${balance}$`;
+const calcDisplayBalance = (acc) => {
+  acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${acc.balance}$`;
 };
 
 //Create custom alerts and append to html
@@ -84,7 +91,17 @@ const alert = (message, type) => {
   alertPlaceholder.className = `alert alert-${type} mx-auto text-center mt-3 w-50`;
 };
 
+const updateUI = function (acc) {
+  // Display movements
+  displayMovements(acc.movements);
+
+  // Display balance
+  calcDisplayBalance(acc);
+};
+
 //Event handlers
+
+//login click event
 let currentAccount;
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault();
@@ -97,10 +114,37 @@ btnLogin.addEventListener('click', function (e) {
     }`;
     containerApp.style.opacity = 100;
     alertPlaceholder.remove();
-
-    displayMovements(currentAccount.movements);
-    calcDisplayBalance(currentAccount.movements);
+    inputLoginUsername.value = inputLoginPin.value = '';
+    inputLoginPin.blur();
+    updateUI(currentAccount);
   } else {
     alert('Invalid PIN!', 'danger');
+  }
+});
+
+//transfer operation
+btnTransfer.addEventListener('click', function (e) {
+  e.preventDefault();
+  const amount = Number(inputTransferAmount.value);
+  const receiverAcc = accounts.find(
+    (acc) => acc.username === inputTransferTo.value
+  );
+  inputTransferAmount.value = inputTransferTo.value = '';
+
+  if (
+    amount > 0 &&
+    receiverAcc &&
+    currentAccount.balance >= amount &&
+    receiverAcc?.username !== currentAccount.username
+  ) {
+    // Doing the transfer
+    currentAccount.movements.push(-amount);
+    receiverAcc.movements.push(amount);
+    toastBody.innerText = `${amount}$ transferred to ${receiverAcc.owner}.✅`;
+    const toast = new bootstrap.Toast(toastLive);
+    toast.show();
+
+    // Update UI
+    updateUI(currentAccount);
   }
 });

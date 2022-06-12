@@ -67,17 +67,19 @@
             <form>
               <div class="d-flex">
                 <input
-                  class="form-control form-control-sm mx-1 form_input"
+                  class="form-control form-control-sm mx-1 form_input transfer_to"
                   type="text"
                   placeholder="Transfer to"
                 />
                 <input
-                  class="form-control form-control-sm form_input"
+                  class="form-control form-control-sm form_input transfer_amount"
                   type="number"
                   placeholder="Amount"
                 />
 
-                <button class="btn btn-light mx-2 btn_operations">
+                <button
+                  class="btn btn-light mx-2 btn_operations transfer_button"
+                >
                   &rarr;
                 </button>
               </div>
@@ -119,6 +121,28 @@
               </div>
             </form>
           </div>
+        </div>
+      </div>
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div
+          id="liveToast"
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <img src="logo.png" class="rounded me-2" width="30" height="24" />
+            <strong class="me-auto">Modern Banker</strong>
+            <small>2s ago</small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body">Hello, world! This is a toast message.</div>
         </div>
       </div>
     </main>

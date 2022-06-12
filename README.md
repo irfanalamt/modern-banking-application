@@ -10,7 +10,7 @@ https://irfanalamt.github.io/modern-banking-application/
 1. username: ia <br />
    password: 1111
 
-2. username: jk <br />
+2. username: kn <br />
    password: 2222
 
 ![Alt text](https://user-images.githubusercontent.com/64161258/173212385-fcd79a34-018a-415c-8c75-8dbe0bf0efee.png 'modern-banker-screenshot')
